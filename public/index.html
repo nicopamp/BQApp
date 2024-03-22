@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unique Word Flash Cards</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Unique Word Flash Cards</h1>
+        <div id="word-container">
+            <div id="word">Word:</div>
+        </div>
+        <div class="dropdowns">
+            <select id="chapters-select" class="dropdown">
+                <option value="" disabled selected hidden>Select Chapter</option>
+            </select>
+            <select id="verses-select" class="dropdown">
+                <option value="" disabled selected hidden>Select Verse</option>
+            </select>
+        </div>
+        <button id="check-btn">Check</button>
+        <button id="next-btn">Next</button>
+        <div id="scoreboard">
+            <div class="score-item">
+                <span class="score-label">Correct:</span>
+                <span class="score-value" id="correct-questions">0</span>
+            </div>
+            <div class="score-item">
+                <span class="score-label">Incorrect:</span>
+                <span class="score-value" id="incorrect-questions">0</span>
+            </div>
+            <div class="score-item">
+                <span class="score-label">Remaining:</span>
+                <span class="score-value" id="remaining-questions">0</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
