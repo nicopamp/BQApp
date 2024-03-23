@@ -72,16 +72,16 @@ document.addEventListener('DOMContentLoaded', function() {
             wordContainer.innerHTML = `<div>Congratulations! You have answered all of the words.</div>`;
         } else {
             // There are still words left to display
-            let remainingWords = words.filter(word => !correctQuestions.includes(words.indexOf(word)));
-            randomIndex = words.indexOf(remainingWords[Math.floor(Math.random() * remainingWords.length)]);
-            const word = remainingWords[randomIndex];
+            let remainingIndices = words.map((_, index) => index).filter(index => !correctQuestions.includes(index));
+            randomIndex = remainingIndices[Math.floor(Math.random() * remainingIndices.length)];
+            const word = words[randomIndex];
             const capitalizedWord = capitalizeFirstLetter(word.word.toLowerCase());
             const quote = word.quote; // Get the corresponding quote for the selected word
             wordContainer.innerHTML = `
                 <div id="word">Word: ${capitalizedWord}</div>
             `;
         }
-    }
+    }    
     
 
     function capitalizeFirstLetter(string) {
