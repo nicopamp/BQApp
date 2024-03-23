@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', function() {
             wordContainer.innerHTML = `<div>Congratulations! You have answered all of the words.</div>`;
         } else {
             // There are still words left to display
-            let remainingWords = words.filter(word => !correctQuestions.includes(word));
+            let remainingWords = words.filter(word => !correctQuestions.includes(words.indexOf(word)));
             randomIndex = Math.floor(Math.random() * remainingWords.length);
             const word = remainingWords[randomIndex];
             const capitalizedWord = capitalizeFirstLetter(word.word.toLowerCase());
