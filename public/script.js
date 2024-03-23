@@ -76,11 +76,14 @@ document.addEventListener('DOMContentLoaded', function() {
             randomIndex = Math.floor(Math.random() * remainingWords.length);
             const word = remainingWords[randomIndex];
             const capitalizedWord = capitalizeFirstLetter(word.word.toLowerCase());
+            const quote = word.quote; // Get the corresponding quote for the selected word
             wordContainer.innerHTML = `
                 <div id="word">Word: ${capitalizedWord}</div>
+                <div id="quote">Quote: ${quote}</div>
             `;
         }
     }
+    
 
     function capitalizeFirstLetter(string) {
         return string.charAt(0).toUpperCase() + string.slice(1);
