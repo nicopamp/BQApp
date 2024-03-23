@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
             // There are still words left to display
             let remainingWords = words.filter(word => !correctQuestions.includes(words.indexOf(word)));
-            randomIndex = Math.floor(Math.random() * remainingWords.length);
+            randomIndex = words.indexOf(remainingWords[Math.floor(Math.random() * remainingWords.length)]);
             const word = remainingWords[randomIndex];
             const capitalizedWord = capitalizeFirstLetter(word.word.toLowerCase());
             const quote = word.quote; // Get the corresponding quote for the selected word
