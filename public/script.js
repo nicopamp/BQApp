@@ -79,7 +79,6 @@ document.addEventListener('DOMContentLoaded', function() {
             const quote = word.quote; // Get the corresponding quote for the selected word
             wordContainer.innerHTML = `
                 <div id="word">Word: ${capitalizedWord}</div>
-                <div id="quote">Quote: ${quote}</div>
             `;
         }
     }
